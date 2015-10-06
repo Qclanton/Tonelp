@@ -88,11 +88,6 @@
 		<div class="footer block">
 			<div class="company-about">
 				<div class="company-about-wrapper">
-					<div id="logo-footer">
-						<a href="<?= site_url(); ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/logo-footer.png"></img>		
-						</a>
-					</div>
                     <?= stripcslashes(get_option("tonelp_footer_main_text", "")) ?>
 				</div>
 			</div>
