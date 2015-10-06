@@ -7,7 +7,7 @@
 
 	<? if ($result != 'none') { ?>			
 		<div style="color: <?= ($result=='success' ? 'green' : 'red') ?>;" class="message-wrapper">
-			Data inserted <?= ($result=='success' ? '' : 'un') ?>successfully
+			Data saved <?= ($result=='success' ? '' : 'un') ?>successfully
 		</div>
 	<? } ?>
 	
@@ -23,11 +23,11 @@
 		<tbody>
 			<? foreach ($forms as $i=>$form) { ?>							
 				<tr class="<?= (($i%2 == 0) ? 'alternate' : ''); ?>">
-					<input type="hidden" name="form[<?= $i; ?>][id]" value="<?= $form->id; ?>"></input>
+					<input type="hidden" name="forms[<?= $i ?>][id]" value="<?= $form->id; ?>"></input>
 					
 					<td><?= $form->step; ?></td>
 					<td>
-						<select name="form[post_id]">
+						<select name="forms[<?= $i ?>][post_id]">
 							<? foreach ($posts as $post) { ?>
 								<option 
 										<?= ($post->ID == $form->post_id ? 'selected="selected"' : ''); ?>

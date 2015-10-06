@@ -7,7 +7,7 @@
 
 	<? if ($result != 'none') { ?>			
 		<div style="color: <?= ($result=='success' ? 'green' : 'red') ?>;" class="message-wrapper">
-			Data inserted <?= ($result=='success' ? '' : 'un') ?>successfully
+			Data saved <?= ($result=='success' ? '' : 'un') ?>successfully
 		</div>
 	<? } ?>
 	
