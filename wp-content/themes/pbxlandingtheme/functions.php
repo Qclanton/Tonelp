@@ -190,4 +190,27 @@ function get_calc_template($type) {
 	return $template;
 }
 // End of render function
+
+
+
+
+
+
+// Theme settings
+function tonelp_edit_options() {
+    // Save options
+    if (isset($_POST['options'])) {
+        foreach ($_POST['options'] as $option=>$value) {
+            update_option($option, $value);
+        }
+    }
+    
+    // Show edit page
+    echo render_tmpl(__DIR__  . "/admin/options.php");
+}
+
+add_action('admin_menu', function() { 
+    add_options_page("Theme", "Theme", "manage_options", "options-theme", "tonelp_edit_options");
+});
+// End of theme settings
 ?>
