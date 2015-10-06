@@ -17,6 +17,20 @@
                         />
                     </td>
                 </tr>
+                
+                <tr>
+                    <th scope="row">
+                        <label for="options[tonelp_infoblock_background_link]">Background Infoblock Image Link</label>
+                    </th>
+                    <td>
+                        <input 
+                            name="options[tonelp_infoblock_background_link]" 
+                            type="text" 
+                            value="<?= get_option("tonelp_infoblock_background_link", "") ?>" 
+                            class="large-text"
+                        />
+                    </td>
+                </tr>
                                 
                 <tr>
                     <th scope="row">

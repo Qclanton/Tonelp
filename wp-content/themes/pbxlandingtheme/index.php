@@ -65,7 +65,7 @@
 	</header>
 	
 	<?= render_tmpl('calc.php'); ?>
-	<section id="info-block">
+	<section style="background: rgba(0, 126, 167, 0) url('<?= get_option("tonelp_infoblock_background_link", "") ?>') no-repeat scroll 0 0 / cover;" id="info-block">
 		<?= get_post('21')->post_content; ?>
 	</section>
 	<section id="skills">
